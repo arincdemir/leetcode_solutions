@@ -21,4 +21,10 @@ class Solution:
             # take the rides available
             take = 0
             for e, m in ridesThatStartAt[i]:
-
+                take = max(take, dfs(e) + m)
+            
+            maxValue = max(skip, take)
+            dp[i] = maxValue
+            return maxValue
+        
+        return dfs(1)
