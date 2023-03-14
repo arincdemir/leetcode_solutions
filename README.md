@@ -13,5 +13,8 @@ The naive approach to search backwards each time is too slow. So next to each pr
 ### 1267. Count Servers that Communicate
 For this question, initialize 2 arrays named rows and colums. In these arrays we will count how many servers are in each row and each column. Do a double for loop for updating these arrays and increment the row and the column of the found server. After that, for each server in a row and column, if the respective row in rows is bigger than 1 (meaning there is more than one server in that row) or the column is bigger than one, increment the answer.
 
+### 1339. Maximum Product of Splitted Binary Tree
+Since the sum of all the tree is constant, in order to maximize the product, we want to make the splits as close as to half of the sum. First I find the sum of all subtrees and put them into a list. Then I find the closes split to half of the total sum using a for loop on sums list.
+
 ### 2008. Maximum Earnings From Taxi
 Very interesting dp question. First need to create a dict that stores the rides that start on each spot. Then use dp to evaluate the two choices: Skip the spot or take the passenger thats on the spot.
