@@ -7,6 +7,12 @@ Use a function to find the mid of the linked list and put it into a root node. U
 ### 433. Genetic Mutation
 Create an adjacency list and put neighboring (ones with only 1 nucleotite difference) genes in it. Then run a bfs starting with the startGene until you arrive at the endGene. If the loop terminates, then it is impossible reaching the endGene.
 
+### 795. Number of Subarrays with Bounded Maximum
+Hold two pointers: l and r. l holds the leftmost index where a valid substring can be formed. Looping over all the elements, there are 3 main cases:
+- nums[i] is bigger than the bound: In this case, it is impossible to form a valid substring with this index. So update l as i + 1.
+- nums[i] is in the bound: We can update r as i and increment coun by r - l + 1 since that is how many substrings we can form with nums[i] being the rightmost element.
+- nums[i] is smaller than the bound: We leave r and l where they are since it does not guarantee a substring can be formed but it does not guarantee that it cannot be formed either. Increment count by r - l + 1 since r is the last position a number inside the bound has been seen, and we can only form a valid substring when we include it.
+
 ### 901. Online Stock Span
 The naive approach to search backwards each time is too slow. So next to each price, I store the closest point that price was exceeded. After that we move from pointer to pointer, until we reach a point where the price is larger than the target. This way we skip looking at each price.
 
