@@ -16,6 +16,7 @@ class Solution:
 
     def getRandom(self) -> int:
         randIndex = math.floor(random.random() * len(self.array))
+        return self.array[randIndex]
 
 # Your Solution object will be instantiated and called as such:
 # obj = Solution(head)
