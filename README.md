@@ -4,6 +4,9 @@ My notes on how I solved some leetcode questions. I am hoping that this file wil
 ### 109. Convert Sorted List to Binary Search Tree
 Use a function to find the mid of the linked list and put it into a root node. Use this function recursively in order to get the root.right and root.left. Find the mid with a function using slow and fast pointers.
 
+### 382. Linked List Random Node
+I planned to generate a random index using a random function. However, reaching that index in a linked list is O(n). To solve this, I transformed the linked list into a list, allowing O(1) index access.
+
 ### 433. Genetic Mutation
 Create an adjacency list and put neighboring (ones with only 1 nucleotite difference) genes in it. Then run a bfs starting with the startGene until you arrive at the endGene. If the loop terminates, then it is impossible reaching the endGene.
 
