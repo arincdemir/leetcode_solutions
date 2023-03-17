@@ -33,3 +33,8 @@ First I calculated the compability score of each mentor with each student since 
 
 ### 2008. Maximum Earnings From Taxi
 Very interesting dp question. First need to create a dict that stores the rides that start on each spot. Then use dp to evaluate the two choices: Skip the spot or take the passenger thats on the spot.
+
+### 2271. Maximum White Tiles Covered by a Carpet
+Intuitively, this question screams that it can be solved with a sliding window technique. However, implementing the actual solution is very tricky in my opinion. So I start with sorting the tiles and declaring the variables `left`, `right` and `windowSize`. While left and right are smaller than the length of `tiles`, we will do one of the two operations:
+- If `tiles[right][1] < tiles[left][0]` which means that we can include the `right` tile as a whole, we increase the window size by the size of the `right` tile. After that, we increase `right` by one.
+- Else, we cannot include the `right` tile as a whole, so we add the partial area to our window length. Then, we increase `left` by one since our window is now bigger than the carpet size.
