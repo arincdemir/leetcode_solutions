@@ -22,6 +22,9 @@ In this question we want to match the smallest number from num1 that is greater 
 ### 901. Online Stock Span
 The naive approach to search backwards each time is too slow. So next to each price, I store the closest point that price was exceeded. After that we move from pointer to pointer, until we reach a point where the price is larger than the target. This way we skip looking at each price.
 
+### 1138. Alphabet Board Path
+The first intuition is to do a bfs on a connected graph. However, since we know where each letter is on the table, we can store the locations in a hashmap. Then we can easily calculate our movements by `movement = map[character] - curLocation`.
+
 ### 1267. Count Servers that Communicate
 For this question, initialize 2 arrays named rows and colums. In these arrays we will count how many servers are in each row and each column. Do a double for loop for updating these arrays and increment the row and the column of the found server. After that, for each server in a row and column, if the respective row in rows is bigger than 1 (meaning there is more than one server in that row) or the column is bigger than one, increment the answer.
 
