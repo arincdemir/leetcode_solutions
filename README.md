@@ -28,6 +28,9 @@ For this question, initialize 2 arrays named rows and colums. In these arrays we
 ### 1339. Maximum Product of Splitted Binary Tree
 Since the sum of all the tree is constant, in order to maximize the product, we want to make the splits as close as to half of the sum. First I find the sum of all subtrees and put them into a list. Then I find the closes split to half of the total sum using a for loop on sums list.
 
+### 1849. Splitting a String Into Descending Consecutive Values
+I used a recursive function `canFormValidSplit` that takes two arguments: `currentString` and `value`. It tries slicing `currentString` into two pieces. The leftmost piece has to be equal to `value - 1`. If so, it calls itself with the right side of `currentString` and `value - 1`.
+
 ### 1947. Maximum Compatibility Score Sum
 First I calculated the compability score of each mentor with each student since this will be accesed many times in the future. Then I generate all the permutations using a backtracking recursive function. I calculated the compability score of the permutations and returned the maximum one.
 
