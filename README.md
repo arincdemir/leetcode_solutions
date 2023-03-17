@@ -16,6 +16,9 @@ Hold two pointers: l and r. l holds the leftmost index where a valid substring c
 - nums[i] is in the bound: We can update r as i and increment coun by r - l + 1 since that is how many substrings we can form with nums[i] being the rightmost element.
 - nums[i] is smaller than the bound: We leave r and l where they are since it does not guarantee a substring can be formed but it does not guarantee that it cannot be formed either. Increment count by r - l + 1 since r is the last position a number inside the bound has been seen, and we can only form a valid substring when we include it.
 
+### 870. Advantage Shuffle
+In this question we want to match the smallest number from num1 that is greater than the number from num2. In order to do that efficiently, I first sorted num1 and num2, with also keeping the index positions of num2. After that I used 2 pointers to traverse the arrays.
+
 ### 901. Online Stock Span
 The naive approach to search backwards each time is too slow. So next to each price, I store the closest point that price was exceeded. After that we move from pointer to pointer, until we reach a point where the price is larger than the target. This way we skip looking at each price.
 
