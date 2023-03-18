@@ -22,9 +22,6 @@ In this question we want to match the smallest number from num1 that is greater 
 ### 901. Online Stock Span
 The naive approach to search backwards each time is too slow. So next to each price, I store the closest point that price was exceeded. After that we move from pointer to pointer, until we reach a point where the price is larger than the target. This way we skip looking at each price.
 
-### 1104. Path In Zigzag Labelled Binary Tree
-The way I did it is to first imagine the tree as a normally labeled one. In that case you can find the parent of `a` as `a // 2`. I calculated the roots of the `label` using that fact, and then went over the odd indexed ones to set them right using `x = 3 * pow(2,i) - x - 1`.
-
 ### 1138. Alphabet Board Path
 The first intuition is to do a bfs on a connected graph. However, since we know where each letter is on the table, we can store the locations in a hashmap. Then we can easily calculate our movements by `movement = map[character] - curLocation`.
 
