@@ -44,3 +44,6 @@ Very interesting dp question. First need to create a dict that stores the rides 
 Intuitively, this question screams that it can be solved with a sliding window technique. However, implementing the actual solution is very tricky in my opinion. So I start with sorting the tiles and declaring the variables `left`, `right` and `windowSize`. While left and right are smaller than the length of `tiles`, we will do one of the two operations:
 - If `tiles[right][1] < tiles[left][0]` which means that we can include the `right` tile as a whole, we increase the window size by the size of the `right` tile. After that, we increase `right` by one.
 - Else, we cannot include the `right` tile as a whole, so we add the partial area to our window length. Then, we increase `left` by one since our window is now bigger than the carpet size.
+
+### 2279. Maximum Bags With Full Capacity of Rocks
+The intuition is that we always want to put the rocks into the bag that needs the least amount to get full capacity. So I created list `empty`, which has the empty spots in each bag. We always want to pick the smallest element from that list, so using a heap is a great idea here. I formed a heap out of `empty` and picked the smallest elements in a while loop.
